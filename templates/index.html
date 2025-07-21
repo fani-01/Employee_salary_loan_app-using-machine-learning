@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary & Loan Predictor</title>
+</head>
+<body>
+    <h2>Enter Employee Details</h2>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="age" required><br><br>
+        Education Number: <input type="number" name="education_num" required><br><br>
+        Hours per Week: <input type="number" name="hours_per_week" required><br><br>
+        Capital Gain: <input type="number" name="capital_gain" required><br><br>
+        Capital Loss: <input type="number" name="capital_loss" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if salary %}
+        <h3>Predicted Salary: {{ salary }}</h3>
+        <h3>Loan Status: {{ loan_status }}</h3>
+    {% endif %}
+</body>
+</html>
